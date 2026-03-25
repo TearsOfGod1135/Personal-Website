@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Software Engineering Portfolio - Levis Ng'ang'a"
+    />
+    <title>Levis Ng'ang'a | Software Engineer</title>
+    <style>
+      /* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* ===== FIXED TOP HEADER ===== */
+.top-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 6%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+/* Logo */
+.top-header .logo {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* Nav inside header */
+.main-nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.main-nav a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.main-nav a:hover {
+  color: #ff5f1f;
+}
+
+/* CTA button */
+.main-nav .cta {
+  background: #ff5f1f;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  min-height: 80vh;
+  padding: 6rem 6% 4rem; /* top padding avoids overlap with fixed header */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    radial-gradient(circle at top left, #ff5f1f, #ff2d00);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  opacity: 0.85;
+}
+
+/* ===== CONTACT NAV ===== */
+nav {
+  background: #111;
+  padding: 1rem 6%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  list-style: none;
+  justify-content: center;
+}
+
+nav a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ff5f1f;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  padding: 4rem 6%;
+  display: grid;
+  gap: 2rem;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  margin-bottom: 2rem;
+}
+
+section h2 {
+  font-size: 1.2rem;
+  color: #ff5f1f;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+section h3 {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+section p {
+  max-width: 700px;
+  color: #bbb;
+}
+
+/* ===== LISTS ===== */
+ul {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+
+/* ===== CARD STYLE ===== */
+#skills,
+#education,
+#about,
+#initiative,
+#projects {
+  background: #121212;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+#skills:hover,
+#education:hover,
+#about:hover,
+#initiative:hover,
+#projects:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #0a0a0a;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #about {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero h1 {
+    font-size: 4.5rem;
+  }
+
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #about {
+    grid-column: span 3;
+  }
+
+  #skills {
+    grid-column: span 2;
+  }
+}
+</style>
+  </head>
+
+  <body>
+    <!-- TOP NAV HEADER -->
+    <header class="top-header">
+      <div class="logo">Levis Ng'ang'a</div>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact" class="cta">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO / HOME -->
+    <section id="home" class="hero">
+      <h1>Levis Ng'ang'a</h1>
+      <h2>Aspiring Software Engineer</h2>
+    </section>
+
+    <!-- CONTACT LINKS -->
+    <nav aria-label="Professional Links" id="contact">
+      <ul>
+        <li>
+          <a href="mailto:leviskariuki2@gmail.com"> leviskariuki2@gmail.com </a>
+        </li>
+        <li>
+          <a href="tel:+254708447914">0708447914</a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/TearsOfGod1135"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://linkedin.com/in/levis-nganga"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- ABOUT -->
+      <section id="about">
+        <h2>PROFESSIONAL PROFILE</h2>
+        <p>
+          Detail-oriented Software Engineer with a focus on building robust,
+          scalable web applications. Proficient in Full-Stack development
+          utilizing the MERN stack (MongoDB, Express, React, Node.js).
+        </p>
+      </section>
+
+      <!-- PROJECTS (placeholder section added) -->
+      <section id="projects">
+        <h2>PROJECTS</h2>
+        <p>
+          Selected works and applications will be showcased here. (Add project
+          cards or images later.)
+        </p>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <h2>TECHNICAL SKILLS</h2>
+
+        <h3>Core Languages</h3>
+        <ul>
+          <li>JavaScript, TypeScript, SQL.</li>
+          <li>HTML5, CSS3,</li>
+        </ul>
+
+        <h3>Frameworks & Environments</h3>
+        <ul>
+          <li>React.js (Hooks, Context API, Redux).</li>
+          <li>Node.js & Express.js (RESTful API Design).</li>
+          <li>Tailwind CSS & Bootstrap (Responsive UI).</li>
+        </ul>
+
+        <h3>Tools & Databases</h3>
+        <ul>
+          <li><strong>Version Control:</strong> Git, GitHub.</li>
+          <li><strong>Databases:</strong> PostgreSQL, MongoDB, Firebase.</li>
+          <li><strong>Testing/Dev:</strong> Postman, Jest, Chrome DevTools.</li>
+        </ul>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education">
+        <h2>EDUCATION</h2>
+        <h3>Software Engineering, Moringa School, 2026-Present.</h3>
+        <p>
+          Intensive cohort-based program focusing on full-stack development,
+          data structures, algorithms, and agile methodologies.
+        </p>
+      </section>
+
+      <!-- CONTINUOUS LEARNING -->
+      <section id="initiative">
+        <h2>CONTINUOUS LEARNING</h2>
+        <p>
+          Regularly contributing to open-source repositories and solving
+          algorithmic challenges on LeetCode.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Levis Ng'ang'a. Engineered with Precision.</p>
+    </footer>
+  </body>
+</html>
